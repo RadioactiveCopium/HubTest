@@ -1,6 +1,6 @@
 --local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-print(0)
-print("
+return function()
+  print("
 
   _   _       _     _____                _         ______           _    _          _ _ _ 
  | \ | |     | |   |  __ \              | |       |  ____|         | |  | |        | | | |
@@ -12,3 +12,4 @@ print("
                                            |___/                                          
 
 ")
+end
