@@ -162,9 +162,10 @@ function Path.new(Target, Endpoint)
 			end
 		else
 			--@ Target class is not a rig
-			if typeof(Endpoint) == "Vector3" or typeof(Endpoint) == "Instance" then
-				path:ComputeAsync(Target.Position, Endpoint.Position)
-			end
+			path:ComputeAsync(Target.Position, typeof(Endpoint) == "Instance" and Endpoint.Position or Endpoint)
+			--[[if typeof(Endpoint) == "Vector3" or typeof(Endpoint) == "Instance" then
+				
+			end]]
 			
 			self["TweenPause"] = false
 			self["TweenStop"] = false
